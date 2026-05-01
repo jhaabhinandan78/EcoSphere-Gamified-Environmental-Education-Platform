@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Colors - EcoLearn Green Theme -->
+    <color name="primary_green">#4CAF50</color>
+    <color name="primary_green_dark">#388E3C</color>
+    <color name="primary_green_light">#81C784</color>
+    
+    <!-- Secondary Colors - Nature Inspired -->
+    <color name="secondary_blue">#2196F3</color>
+    <color name="secondary_blue_dark">#1976D2</color>
+    <color name="secondary_blue_light">#64B5F6</color>
+    
+    <!-- Admin/Teacher Theme - Teal (harmonious with student green, distinct identity) -->
+    <color name="admin_primary">#00897B</color>
+    <color name="admin_primary_dark">#00695C</color>
+    <color name="admin_primary_light">#B2DFDB</color>
+    
+    <!-- Accent Colors -->
+    <color name="accent_orange">#FF9800</color>
+    <color name="accent_purple">#9C27B0</color>
+    <color name="accent_teal">#009688</color>
+    
+    <!-- Status Colors -->
+    <color name="success_green">#4CAF50</color>
+    <color name="warning_orange">#FF9800</color>
+    <color name="error_red">#F44336</color>
+    <color name="info_blue">#2196F3</color>
+    
+    <!-- Neutral Colors -->
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+    <color name="text_hint">#BDBDBD</color>
+    <color name="text_disabled">#9E9E9E</color>
+    
+    <!-- Background Colors -->
+    <color name="background_primary">#FFFFFF</color>
+    <color name="background_secondary">#F5F5F5</color>
+    <color name="background_card">#FFFFFF</color>
+    <color name="background_overlay">#80000000</color>
+    
+    <!-- Surface Colors -->
+    <color name="surface_light">#FAFAFA</color>
+    <color name="surface_medium">#EEEEEE</color>
+    <color name="surface_dark">#E0E0E0</color>
+    
+    <!-- Divider Colors -->
+    <color name="divider_light">#E0E0E0</color>
+    <color name="divider_medium">#BDBDBD</color>
+    
+    <!-- Legacy Colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="colorPrimary">@color/admin_primary</color>
+    <color name="colorPrimaryDark">@color/admin_primary_dark</color>
+    <color name="colorAccent">@color/primary_green</color>
+</resources>

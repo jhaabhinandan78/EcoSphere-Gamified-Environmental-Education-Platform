@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Module Title -->
+        <TextView
+            android:id="@+id/tvModuleTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Module Title"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="#D32F2F"
+            android:background="#FFEBEE"
+            android:padding="6dp"
+            android:layout_marginBottom="12dp"
+            android:drawableStart="@android:drawable/ic_menu_agenda"
+            android:drawablePadding="8dp" />
+
+        <!-- Question -->
+        <TextView
+            android:id="@+id/tvQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Question text goes here"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Options -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:id="@+id/tvOption1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="A) Option 1"
+                android:textSize="14sp"
+                android:textColor="#666666"
+                android:padding="4dp" />
+
+            <TextView
+                android:id="@+id/tvOption2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="B) Option 2"
+                android:textSize="14sp"
+                android:textColor="#666666"
+                android:padding="4dp" />
+
+            <TextView
+                android:id="@+id/tvOption3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="C) Option 3"
+                android:textSize="14sp"
+                android:textColor="#666666"
+                android:padding="4dp" />
+
+            <TextView
+                android:id="@+id/tvOption4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="D) Option 4"
+                android:textSize="14sp"
+                android:textColor="#666666"
+                android:padding="4dp" />
+
+        </LinearLayout>
+
+        <!-- Correct Answer -->
+        <TextView
+            android:id="@+id/tvCorrectAnswer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="✓ Correct Answer"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#4CAF50"
+            android:background="#E8F5E8"
+            android:padding="8dp"
+            android:layout_marginBottom="16dp"
+            android:drawableStart="@android:drawable/ic_menu_agenda"
+            android:drawablePadding="8dp" />
+
+        <!-- Action Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end">
+
+            <Button
+                android:id="@+id/btnEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="Edit"
+                android:textSize="12sp"
+                android:backgroundTint="#2196F3"
+                android:textColor="@android:color/white"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/btnDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="Delete"
+                android:textSize="12sp"
+                android:backgroundTint="#F44336"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

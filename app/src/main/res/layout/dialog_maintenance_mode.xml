@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🚧 System Maintenance"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_marginBottom="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp"
+            android:padding="12dp"
+            android:background="#FFEBEE">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="🚧 Enable Maintenance Mode"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#D32F2F"
+                android:layout_gravity="center_vertical" />
+
+            <Switch
+                android:id="@+id/switchMaintenanceMode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="Maintenance Message for Students">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etMaintenanceMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minLines="2"
+                android:maxLines="4"
+                android:inputType="textMultiLine|textCapSentences"
+                android:maxLength="200" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp"
+            android:padding="8dp"
+            android:background="#F5F5F5">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="🔑 Admin Override Access"
+                android:textSize="14sp"
+                android:textColor="#333333"
+                android:layout_gravity="center_vertical" />
+
+            <Switch
+                android:id="@+id/switchAdminOverride"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="⚠️ MAINTENANCE MODE WARNING:\n\n• When enabled, students cannot access the app\n• Students will see your maintenance message\n• Admin Override allows admins to access during maintenance\n• Use for system updates, data migration, or emergency fixes\n• Remember to disable when maintenance is complete!\n\n🔧 Best Practice: Test all changes before disabling maintenance mode."
+            android:textSize="12sp"
+            android:textColor="#666666"
+            android:background="#FFF3E0"
+            android:padding="12dp" />
+
+    </LinearLayout>
+
+</ScrollView>

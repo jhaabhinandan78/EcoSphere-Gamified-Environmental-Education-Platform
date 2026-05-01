@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="Quiz Passing Score % (0-100)">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etQuizPassingScore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLength="3" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="Maximum Quiz Attempts Per Day (1-10)">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etMaxQuizAttempts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLength="2" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🎓 Learning System Configuration:\n\n• Passing Score: Minimum % required to pass quizzes\n• Max Attempts: How many times students can retry quizzes per day\n\n✅ These settings are now enforced in the app!\n\nStudents who fail a quiz can retry up to the maximum attempts per day. After using all attempts, they must wait until the next day to try again."
+            android:textSize="12sp"
+            android:textColor="#666666"
+            android:background="#E8F5E9"
+            android:padding="12dp" />
+
+    </LinearLayout>
+
+</ScrollView>

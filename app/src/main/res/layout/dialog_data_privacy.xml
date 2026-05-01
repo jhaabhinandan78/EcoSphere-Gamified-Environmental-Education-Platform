@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🛡️ Data &amp; Privacy Settings"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_marginBottom="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp"
+            android:padding="8dp"
+            android:background="#F5F5F5">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="📊 Collect Usage Analytics"
+                android:textSize="14sp"
+                android:textColor="#333333"
+                android:layout_gravity="center_vertical" />
+
+            <Switch
+                android:id="@+id/switchCollectAnalytics"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp"
+            android:padding="8dp"
+            android:background="#F5F5F5">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="🕶️ Anonymous Mode"
+                android:textSize="14sp"
+                android:textColor="#333333"
+                android:layout_gravity="center_vertical" />
+
+            <Switch
+                android:id="@+id/switchAnonymousMode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp"
+            android:padding="8dp"
+            android:background="#F5F5F5">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="🇪🇺 GDPR Compliance Mode"
+                android:textSize="14sp"
+                android:textColor="#333333"
+                android:layout_gravity="center_vertical" />
+
+            <Switch
+                android:id="@+id/switchGdprCompliance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="Data Retention Period (Days)">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etDataRetentionDays"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLength="4" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🛡️ Privacy Controls:\n\n• Usage Analytics: Track app usage for improvements\n• Anonymous Mode: Remove personal identifiers from data\n• GDPR Compliance: Enhanced privacy protections for EU users\n• Data Retention: How long to keep user data (1-3650 days)\n\n⚠️ Disabling analytics may limit your ability to monitor platform performance."
+            android:textSize="12sp"
+            android:textColor="#666666"
+            android:background="#FFEBEE"
+            android:padding="12dp" />
+
+    </LinearLayout>
+
+</ScrollView>

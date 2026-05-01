@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F8F5"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📝 Content Management"
+            android:textColor="#00897B"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Manage quizzes, challenges, modules, and view leaderboard"
+            android:textColor="#666666"
+            android:textSize="14sp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Quiz Management -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardQuizManagement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="20dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:background="@android:drawable/star_big_on"
+                    android:gravity="center"
+                    android:text="📝"
+                    android:textSize="36sp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Quiz Management"
+                        android:textColor="#00897B"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Create, edit, and delete quiz questions"
+                        android:textColor="#666666"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="MANAGE QUIZZES →"
+                        android:textColor="#00897B"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Challenge Management -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardChallengeManagement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="20dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:background="@android:drawable/star_big_on"
+                    android:gravity="center"
+                    android:text="🎯"
+                    android:textSize="36sp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Challenge Management"
+                        android:textColor="#FF9800"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Create, edit, and manage eco challenges"
+                        android:textColor="#666666"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="MANAGE CHALLENGES →"
+                        android:textColor="#FF9800"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Module Management -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardModuleManagement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="20dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:background="@android:drawable/star_big_on"
+                    android:gravity="center"
+                    android:text="📚"
+                    android:textSize="36sp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Module Management"
+                        android:textColor="#4CAF50"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Create, edit, and organize learning modules"
+                        android:textColor="#666666"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="MANAGE MODULES →"
+                        android:textColor="#4CAF50"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Leaderboard View -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardLeaderboardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardBackgroundColor="#9C27B0"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="20dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:background="@android:drawable/star_big_on"
+                    android:gravity="center"
+                    android:text="🏆"
+                    android:textSize="36sp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="View Leaderboard"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Monitor student rankings and performance"
+                        android:textColor="#E1BEE7"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="VIEW RANKINGS →"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Quick Data Seeding -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⚡ Quick Data Seeding"
+            android:textColor="#00897B"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Populate database with sample data for testing"
+            android:textColor="#666666"
+            android:textSize="13sp"
+            android:layout_marginBottom="12dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSeedModules"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:text="Seed Modules"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp"
+                android:textAllCaps="false"
+                android:minHeight="56dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                app:backgroundTint="#4CAF50"
+                app:cornerRadius="12dp"
+                app:icon="@android:drawable/ic_menu_agenda"
+                app:iconGravity="start"
+                app:iconPadding="8dp"
+                app:iconSize="20dp"
+                app:iconTint="#FFFFFF" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSeedChallenges"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:text="Seed Challenges"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp"
+                android:textAllCaps="false"
+                android:minHeight="56dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                app:backgroundTint="#FF9800"
+                app:cornerRadius="12dp"
+                app:icon="@android:drawable/ic_menu_camera"
+                app:iconGravity="start"
+                app:iconPadding="8dp"
+                app:iconSize="20dp"
+                app:iconTint="#FFFFFF" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSeedStudents"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:text="Seed Students"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp"
+                android:textAllCaps="false"
+                android:minHeight="56dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                app:backgroundTint="#9C27B0"
+                app:cornerRadius="12dp"
+                app:icon="@android:drawable/ic_menu_myplaces"
+                app:iconGravity="start"
+                app:iconPadding="8dp"
+                app:iconSize="20dp"
+                app:iconTint="#FFFFFF" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSeedAllData"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:text="Seed All Data"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp"
+                android:textAllCaps="false"
+                android:minHeight="56dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                app:backgroundTint="#00897B"
+                app:cornerRadius="12dp"
+                app:icon="@android:drawable/ic_menu_upload"
+                app:iconGravity="start"
+                app:iconPadding="8dp"
+                app:iconSize="20dp"
+                app:iconTint="#FFFFFF" />
+        </LinearLayout>
+
+        <!-- 🏫 NEW: School Creation Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCreateSchools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:text="🏫 Create Test Schools"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textAllCaps="false"
+            android:minHeight="56dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            app:backgroundTint="#2E7D32"
+            app:cornerRadius="12dp"
+            app:icon="@android:drawable/ic_menu_add"
+            app:iconGravity="start"
+            app:iconPadding="8dp"
+            app:iconSize="20dp"
+            app:iconTint="#FFFFFF" />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📱 Student App Features"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_marginBottom="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp"
+            android:padding="8dp"
+            android:background="#F5F5F5">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="📚 Learning Modules"
+                android:textSize="14sp"
+                android:textColor="#333333"
+                android:layout_gravity="center_vertical" />
+
+            <Switch
+                android:id="@+id/switchModules"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp"
+            android:padding="8dp"
+            android:background="#F5F5F5">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="🏆 Eco Challenges"
+                android:textSize="14sp"
+                android:textColor="#333333"
+                android:layout_gravity="center_vertical" />
+
+            <Switch
+                android:id="@+id/switchChallenges"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp"
+            android:padding="8dp"
+            android:background="#F5F5F5">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="🥇 Leaderboard"
+                android:textSize="14sp"
+                android:textColor="#333333"
+                android:layout_gravity="center_vertical" />
+
+            <Switch
+                android:id="@+id/switchLeaderboard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp"
+            android:padding="8dp"
+            android:background="#F5F5F5">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="🤖 Eco Assistant Chatbot"
+                android:textSize="14sp"
+                android:textColor="#333333"
+                android:layout_gravity="center_vertical" />
+
+            <Switch
+                android:id="@+id/switchEcoAssistant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp"
+            android:padding="8dp"
+            android:background="#F5F5F5">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="📊 Progress Tracker"
+                android:textSize="14sp"
+                android:textColor="#333333"
+                android:layout_gravity="center_vertical" />
+
+            <Switch
+                android:id="@+id/switchProgressTracker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp"
+            android:padding="8dp"
+            android:background="#F5F5F5">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="🌍 Ecosystem Game"
+                android:textSize="14sp"
+                android:textColor="#333333"
+                android:layout_gravity="center_vertical" />
+
+            <Switch
+                android:id="@+id/switchEcosystemGame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="⚠️ Feature Control:\n\n• Disabled features will be hidden from students\n• Students currently using disabled features will lose access\n• Re-enabling features restores full functionality\n• Changes take effect immediately"
+            android:textSize="12sp"
+            android:textColor="#666666"
+            android:background="#FFF3E0"
+            android:padding="12dp" />
+
+    </LinearLayout>
+
+</ScrollView>

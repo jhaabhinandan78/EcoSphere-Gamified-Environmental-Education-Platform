@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Registration Portal - EcoLearn Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌱 EcoLearn Platform</h1>
+            <p class="subtitle">School Registration Portal</p>
+        </header>
+
+        <div class="card">
+            <div class="card-header">
+                <h2>Register Your School</h2>
+                <p>Fill out the form below to get your unique school access code</p>
+            </div>
+
+            <form id="schoolRegistrationForm">
+                <!-- School Information -->
+                <div class="form-section">
+                    <h3>School Information</h3>
+                    
+                    <div class="form-group">
+                        <label for="schoolName">School Name *</label>
+                        <input type="text" id="schoolName" name="schoolName" required 
+                               placeholder="e.g., Delhi Public School">
+                        <small>Enter the full official name of your school</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="schoolType">School Type *</label>
+                        <select id="schoolType" name="schoolType" required>
+                            <option value="">Select school type</option>
+                            <option value="public">Public School</option>
+                            <option value="private">Private School</option>
+                            <option value="international">International School</option>
+                            <option value="government">Government School</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="city">City *</label>
+                            <input type="text" id="city" name="city" required 
+                                   placeholder="e.g., Delhi">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="state">State/Province *</label>
+                            <input type="text" id="state" name="state" required 
+                                   placeholder="e.g., Delhi">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="country">Country *</label>
+                        <input type="text" id="country" name="country" required 
+                               placeholder="e.g., India">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Full Address *</label>
+                        <textarea id="address" name="address" rows="3" required 
+                                  placeholder="Enter complete school address"></textarea>
+                    </div>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="form-section">
+                    <h3>Contact Information</h3>
+                    
+                    <div class="form-group">
+                        <label for="principalName">Principal/Head Name *</label>
+                        <input type="text" id="principalName" name="principalName" required 
+                               placeholder="e.g., Dr. Rajesh Kumar">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="contactEmail">Official Email *</label>
+                            <input type="email" id="contactEmail" name="contactEmail" required 
+                                   placeholder="principal@school.edu">
+                            <small>School code will be sent to this email</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactPhone">Contact Phone *</label>
+                            <input type="tel" id="contactPhone" name="contactPhone" required 
+                                   placeholder="+91 98765 43210">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="alternateEmail">Alternate Email (Optional)</label>
+                        <input type="email" id="alternateEmail" name="alternateEmail" 
+                               placeholder="admin@school.edu">
+                    </div>
+                </div>
+
+                <!-- School Details -->
+                <div class="form-section">
+                    <h3>Additional Details</h3>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="studentCount">Approximate Student Count *</label>
+                            <input type="number" id="studentCount" name="studentCount" required 
+                                   min="1" placeholder="e.g., 500">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="teacherCount">Approximate Teacher Count *</label>
+                            <input type="number" id="teacherCount" name="teacherCount" required 
+                                   min="1" placeholder="e.g., 50">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="website">School Website (Optional)</label>
+                        <input type="url" id="website" name="website" 
+                               placeholder="https://www.school.edu">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="notes">Additional Notes (Optional)</label>
+                        <textarea id="notes" name="notes" rows="3" 
+                                  placeholder="Any additional information you'd like to share"></textarea>
+                    </div>
+                </div>
+
+                <!-- Terms and Conditions -->
+                <div class="form-section">
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">
+                            I confirm that I am authorized to register this school and agree to the 
+                            <a href="#" target="_blank">Terms of Service</a> and 
+                            <a href="#" target="_blank">Privacy Policy</a> *
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-actions">
+                    <button type="submit" id="submitBtn" class="btn-primary">
+                        <span class="btn-text">Generate School Code</span>
+                        <span class="btn-loader" style="display: none;">
+                            <span class="spinner"></span> Processing...
+                        </span>
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Success Modal -->
+        <div id="successModal" class="modal">
+            <div class="modal-content success">
+                <div class="modal-header">
+                    <span class="success-icon">✅</span>
+                    <h2>Registration Successful!</h2>
+                </div>
+                <div class="modal-body">
+                    <p>Your school has been successfully registered.</p>
+                    <div class="code-display">
+                        <label>Your School Access Code:</label>
+                        <div class="code-box">
+                            <span id="generatedCode" class="code-text"></span>
+                            <button type="button" id="copyCodeBtn" class="btn-copy" title="Copy to clipboard">
+                                📋 Copy
+                            </button>
+                        </div>
+                    </div>
+                    <div class="info-box">
+                        <p><strong>Important:</strong></p>
+                        <ul>
+                            <li>A confirmation email has been sent to <strong id="confirmEmail"></strong></li>
+                            <li>Share this code only with authorized teachers</li>
+                            <li>Keep this code secure - it's required for teacher registration</li>
+                            <li>The first teacher to register will become the Lead Teacher</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="closeModalBtn" class="btn-secondary">Close</button>
+                    <button type="button" id="downloadBtn" class="btn-primary">Download Details</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Error Modal -->
+        <div id="errorModal" class="modal">
+            <div class="modal-content error">
+                <div class="modal-header">
+                    <span class="error-icon">❌</span>
+                    <h2>Registration Failed</h2>
+                </div>
+                <div class="modal-body">
+                    <p id="errorMessage">An error occurred during registration. Please try again.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="closeErrorBtn" class="btn-secondary">Close</button>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 EcoLearn Platform. All rights reserved.</p>
+            <p>Need help? Contact us at <a href="mailto:support@ecolearn.edu">support@ecolearn.edu</a></p>
+        </footer>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+    
+    <!-- Application Scripts -->
+    <script src="firebase-config.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

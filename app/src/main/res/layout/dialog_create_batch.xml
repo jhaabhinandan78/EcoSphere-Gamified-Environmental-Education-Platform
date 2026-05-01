@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create New Batch"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create a class/batch to organize your students"
+        android:textSize="14sp"
+        android:textColor="#666666"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Batch Name Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilBatchName"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="Batch Name"
+        app:boxStrokeColor="#2E8B57"
+        app:hintTextColor="#2E8B57"
+        app:helperText="e.g., Grade 10-A, Biology 101, Class 2024"
+        app:helperTextTextColor="#666666">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etBatchName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#333333"
+            android:inputType="textCapWords"
+            android:maxLength="50" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Academic Year Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilAcademicYear"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:hint="Academic Year"
+        app:boxStrokeColor="#2E8B57"
+        app:hintTextColor="#2E8B57"
+        app:helperText="e.g., 2024-2025, 2025-2026"
+        app:helperTextTextColor="#666666">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etAcademicYear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#333333"
+            android:inputType="text"
+            android:maxLength="20" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Info Box -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#E3F2FD"
+        android:padding="12dp"
+        android:layout_marginBottom="24dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/ic_dialog_info"
+            app:tint="#1976D2" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="12dp"
+            android:text="Students will see this batch when registering with your school code."
+            android:textSize="12sp"
+            android:textColor="#1976D2" />
+    </LinearLayout>
+
+    <!-- Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCancel"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:textColor="#666666"
+            android:layout_marginEnd="8dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCreate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Batch"
+            android:textColor="@android:color/white"
+            app:backgroundTint="#2E8B57"
+            app:cornerRadius="8dp" />
+    </LinearLayout>
+
+</LinearLayout>

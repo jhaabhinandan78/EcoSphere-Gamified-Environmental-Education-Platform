@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CapStone">
+        
+        <!-- Firebase Cloud Messaging Service -->
+        <service
+            android:name=".services.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        
+        <!-- Notification metadata -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@mipmap/ic_launcher" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorPrimary" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="ecolearn_channel" />
+        
+        <activity
+            android:name=".TestDailyReminderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TeacherApprovalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BatchManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminUserRolesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminPushNotificationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminPlatformSettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminModuleManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminChallengeManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminQuizManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChallengeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StudentChallengesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProgressTrackerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EcosystemGameActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".EcoAssistantActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".AboutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HelpFaqActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ContactActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".QuizActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LeaderboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ModuleDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StudentModulesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LiveActivityFeedActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TopPerformersActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ReviewChallengesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SendAnnouncementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MySubmissionsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AnnouncementsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InAppNotificationsActivity"
+            android:exported="false"
+            android:parentActivityName=".StudentMainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".StudentMainActivity" />
+        </activity>
+        <activity
+            android:name=".StudentMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RoleSelectionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
