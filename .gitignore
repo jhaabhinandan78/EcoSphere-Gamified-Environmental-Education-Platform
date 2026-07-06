@@ -1,32 +1,83 @@
-*.iml
-.gradle
-/local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
-.DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
-local.properties
+# ═══════════════════════════════════════════════════════════
+# EcoSphere Android Project — .gitignore
+# ═══════════════════════════════════════════════════════════
 
-# Firebase - contains real API keys, never commit these
+# ─── Firebase / Secrets — NEVER commit these ───────────────
 app/google-services.json
 school-registration-portal/firebase-config.js
+*.keystore
+*.jks
+keystore.properties
+signing.properties
+secrets.properties
+*.p12
+*.pem
 
-# Build outputs
+# ─── Local Configuration ────────────────────────────────────
+local.properties
+*.local.properties
+
+# ─── Android Build Outputs ──────────────────────────────────
+*.iml
+.gradle/
+/build/
 app/build/
+**/build/
+/captures/
+.externalNativeBuild/
+.cxx/
 
-# IDE
+# ─── Android Studio / IntelliJ IDE ──────────────────────────
 .idea/
+*.iws
+*.ipr
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# ─── VS Code ─────────────────────────────────────────────────
 .vscode/
+
+# ─── Kotlin Compiler ─────────────────────────────────────────
 .kotlin/
 
-# Internal dev notes and checkpoint docs — not needed in repo
+# ─── Gradle Cache ────────────────────────────────────────────
+.gradle/
+gradle/wrapper/gradle-wrapper.jar.bak
+gradle-app.setting
+
+# ─── OS Generated Files ──────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# ─── Log Files ───────────────────────────────────────────────
+*.log
+/logs/
+
+# ─── APK / AAB Release Files ─────────────────────────────────
+*.apk
+*.aab
+*.ap_
+
+# ─── ProGuard ────────────────────────────────────────────────
+/proguard/
+dump.txt
+mapping.txt
+seeds.txt
+usage.txt
+
+# ─── Test Reports ────────────────────────────────────────────
+**/test-results/
+**/androidTest-results/
+
+# ─── Internal Dev Notes — already deleted, kept here to prevent re-creation ───
 ACTIVITY_LOGGING_IMPLEMENTATION.md
 ADMIN_LOGIN_GUIDE.md
 ADMIN_QUICK_ACTIONS_COMPLETE_VERIFICATION.md
